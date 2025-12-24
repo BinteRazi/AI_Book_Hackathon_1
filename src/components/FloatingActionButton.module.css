@@ -1,0 +1,159 @@
+.fabContainer {
+  position: fixed;
+  z-index: 1000;
+}
+
+.bottomRight {
+  bottom: 20px;
+  right: 20px;
+}
+
+.bottomLeft {
+  bottom: 20px;
+  left: 20px;
+}
+
+.topRight {
+  top: 20px;
+  right: 20px;
+}
+
+.topLeft {
+  top: 20px;
+  left: 20px;
+}
+
+.fabMainBtn {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: none;
+  background-color: var(--ifm-color-primary);
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.fabMainBtn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+}
+
+.fabMainBtn.open {
+  transform: rotate(45deg);
+  background-color: var(--ifm-color-danger);
+}
+
+.fabMenu {
+  position: absolute;
+  bottom: 60px;
+  right: 0;
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 10px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.fabMenu.open {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.fabAction {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  transition-delay: var(--delay, 0ms);
+}
+
+.fabActionBtn {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: none;
+  background-color: var(--ifm-color-emphasis-800);
+  color: white;
+  font-size: 1.2rem;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+.fabActionBtn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  background-color: var(--ifm-color-emphasis-900);
+}
+
+.fabActionLabel {
+  background-color: var(--ifm-color-emphasis-900);
+  color: white;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  white-space: nowrap;
+  opacity: 0;
+  transform: translateX(10px);
+  transition: all 0.2s ease;
+}
+
+.fabAction:hover .fabActionLabel {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Animation for individual action items */
+.fabMenu.open .fabAction {
+  transform: translateY(10px);
+}
+
+.fabMenu.open .action-1 {
+  transition-delay: calc(0 * 50ms);
+}
+
+.fabMenu.open .action-2 {
+  transition-delay: calc(1 * 50ms);
+}
+
+.fabMenu.open .action-3 {
+  transition-delay: calc(2 * 50ms);
+}
+
+.fabMenu.open .action-4 {
+  transition-delay: calc(3 * 50ms);
+}
+
+.fabMenu.open .action-5 {
+  transition-delay: calc(4 * 50ms);
+}
+
+@media (max-width: 768px) {
+  .fabMainBtn {
+    width: 50px;
+    height: 50px;
+    font-size: 1.2rem;
+  }
+
+  .fabActionBtn {
+    width: 40px;
+    height: 40px;
+    font-size: 1rem;
+  }
+
+  .fabMenu {
+    bottom: 50px;
+  }
+}

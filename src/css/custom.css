@@ -1,0 +1,132 @@
+/**
+ * Any CSS included here will be global. The classic template
+ * bundles Infima by default. Infima is a CSS framework designed to
+ * work well for content-centric websites.
+ */
+
+/* You can override the default Infima variables here. */
+:root {
+  --ifm-color-primary: #2e8555;
+  --ifm-color-primary-dark: #29784c;
+  --ifm-color-primary-darker: #277148;
+  --ifm-color-primary-darkest: #205d3b;
+  --ifm-color-primary-light: #33925d;
+  --ifm-color-primary-lighter: #359962;
+  --ifm-color-primary-lightest: #3cad6e;
+  --ifm-code-font-size: 95%;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+}
+
+/* For readability concerns, you should choose a lighter palette in dark mode. */
+[data-theme='dark'] {
+  --ifm-color-primary: #25c2a0;
+  --ifm-color-primary-dark: #21af90;
+  --ifm-color-primary-darker: #1fa588;
+  --ifm-color-primary-darkest: #1a8870;
+  --ifm-color-primary-light: #29d5b0;
+  --ifm-color-primary-lighter: #32d8b4;
+  --ifm-color-primary-lightest: #4fddbf;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+}
+
+/* Print-specific styles */
+@media print {
+  /* Hide elements not needed for print */
+  .navbar,
+  .footer,
+  .sidebar,
+  .theme-edit-this-page,
+  .table-of-contents,
+  .pagination-nav,
+  .blog-post-separator,
+  .blog-authors,
+  .blog-tags,
+  .social-share-container,
+  .live-chat-container,
+  .fab-container,
+  .cookie-banner,
+  .announcement-banner,
+  .notification-container,
+  .top-progress-bar,
+  .page-loading-overlay,
+  .dark-mode-toggle,
+  .blog-search-container,
+  .newsletter-subscription {
+    display: none !important;
+  }
+
+  /* Optimize layout for print */
+  .main-wrapper,
+  .container,
+  .row {
+    width: 100% !important;
+    max-width: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  /* Improve readability */
+  body {
+    font-family: Georgia, 'Times New Roman', serif;
+    line-height: 1.6;
+    color: black;
+    background: white;
+  }
+
+  /* Ensure proper heading hierarchy */
+  h1, h2, h3, h4, h5, h6 {
+    page-break-after: avoid;
+    page-break-inside: avoid;
+    color: black;
+  }
+
+  /* Images should fit properly */
+  img {
+    max-width: 100% !important;
+    height: auto !important;
+  }
+
+  /* Code blocks */
+  pre, code {
+    background-color: #f5f5f5 !important;
+    border: 1px solid #ccc !important;
+    page-break-inside: avoid;
+    font-family: 'Courier New', Courier, monospace;
+  }
+
+  /* Links should show URLs */
+  a {
+    color: black !important;
+    text-decoration: underline !important;
+  }
+
+  a[href]:after {
+    content: " (" attr(href) ") ";
+    font-size: 0.8em;
+    color: #666;
+  }
+
+  /* Remove backgrounds that waste ink */
+  * {
+    background: transparent !important;
+    box-shadow: none !important;
+  }
+
+  /* Tables */
+  table {
+    page-break-inside: avoid;
+  }
+
+  /* Blockquotes */
+  blockquote {
+    border-left: 4px solid #ccc;
+    margin: 1em 0;
+    padding-left: 1em;
+    font-style: italic;
+  }
+
+  /* Better print margins */
+  @page {
+    margin: 2cm;
+  }
+}

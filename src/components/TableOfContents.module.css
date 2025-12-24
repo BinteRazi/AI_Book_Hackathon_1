@@ -1,0 +1,88 @@
+.toc {
+  background-color: var(--ifm-color-emphasis-100);
+  border: 1px solid var(--ifm-color-emphasis-200);
+  border-radius: 4px;
+  padding: 1rem;
+  margin: 1rem 0;
+  max-width: 400px;
+}
+
+.tocTitle {
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--ifm-heading-color);
+}
+
+.tocList {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.tocItem {
+  margin: 0.25rem 0;
+}
+
+.tocItem.level-2 {
+  font-weight: 500;
+}
+
+.tocItem.level-3 {
+  font-weight: 400;
+}
+
+.tocItem.level-4 {
+  font-weight: 400;
+  font-size: 0.9rem;
+}
+
+.tocItem.level-5 {
+  font-weight: 400;
+  font-size: 0.85rem;
+}
+
+.tocItem.level-6 {
+  font-weight: 400;
+  font-size: 0.8rem;
+}
+
+.tocLink {
+  display: block;
+  padding: 0.25rem 0.5rem;
+  color: var(--ifm-color-emphasis-800);
+  text-decoration: none;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+}
+
+.tocLink:hover {
+  background-color: var(--ifm-color-emphasis-200);
+  color: var(--ifm-color-emphasis-900);
+}
+
+.tocItem.active > .tocLink {
+  background-color: var(--ifm-color-primary-lightest);
+  color: var(--ifm-color-primary);
+  font-weight: 600;
+}
+
+.tocItem.level-2.active > .tocLink {
+  background-color: var(--ifm-color-primary-lighter);
+}
+
+/* Sticky positioning for larger screens */
+@media (min-width: 997px) {
+  .toc {
+    position: sticky;
+    top: 2rem;
+    align-self: flex-start;
+  }
+}
+
+@media (max-width: 996px) {
+  .toc {
+    max-width: 100%;
+  }
+}

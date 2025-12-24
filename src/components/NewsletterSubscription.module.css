@@ -1,0 +1,34 @@
+.newsletterContainer {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.subscriptionForm {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.emailInput {
+  min-width: 250px;
+}
+
+.subscribeButton {
+  min-width: 120px;
+}
+
+@media (max-width: 768px) {
+  .subscriptionForm {
+    flex-direction: column;
+  }
+
+  .emailInput {
+    width: 100%;
+  }
+
+  .subscribeButton {
+    width: 100%;
+  }
+}

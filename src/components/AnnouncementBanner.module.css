@@ -1,0 +1,83 @@
+.announcementBanner {
+  position: relative;
+  width: 100%;
+  padding: 0.75rem 1rem;
+  color: white;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+.announcementBanner.info {
+  background-color: var(--ifm-color-info);
+  color: var(--ifm-color-info-contrast-background);
+}
+
+.announcementBanner.warning {
+  background-color: var(--ifm-color-warning);
+  color: var(--ifm-color-warning-contrast-background);
+}
+
+.announcementBanner.success {
+  background-color: var(--ifm-color-success);
+  color: var(--ifm-color-success-contrast-background);
+}
+
+.announcementBanner.error {
+  background-color: var(--ifm-color-danger);
+  color: var(--ifm-color-danger-contrast-background);
+}
+
+.announcementContent {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 1rem;
+}
+
+.announcementText {
+  flex: 1;
+  text-align: center;
+}
+
+.announcementText strong {
+  margin-right: 0.5rem;
+}
+
+.dismissButton {
+  background: none;
+  border: none;
+  color: inherit;
+  font-size: 1.2rem;
+  cursor: pointer;
+  padding: 0.25rem;
+  border-radius: 4px;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dismissButton:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+@media (max-width: 768px) {
+  .announcementContent {
+    flex-direction: column;
+    gap: 0.5rem;
+    text-align: center;
+  }
+
+  .announcementText {
+    text-align: center;
+  }
+
+  .dismissButton {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+  }
+}

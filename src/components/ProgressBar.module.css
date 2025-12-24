@@ -1,0 +1,56 @@
+.progressBarContainer {
+  width: 100%;
+  border-radius: 2px;
+  overflow: hidden;
+  position: relative;
+  transition: opacity 0.3s ease;
+}
+
+.progressBarFill {
+  height: 100%;
+  transition: width 0.3s ease;
+  border-radius: 2px;
+  position: relative;
+}
+
+/* Animated stripes for active progress */
+.progressBarFill::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: linear-gradient(
+    45deg,
+    rgba(255, 255, 255, 0.15) 25%,
+    transparent 25%,
+    transparent 50%,
+    rgba(255, 255, 255, 0.15) 50%,
+    rgba(255, 255, 255, 0.15) 75%,
+    transparent 75%,
+    transparent
+  );
+  background-size: 20px 20px;
+  animation: progress-bar-stripes 1s linear infinite;
+  border-radius: 2px;
+}
+
+@keyframes progress-bar-stripes {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 20px 0;
+  }
+}
+
+/* Top fixed progress bar for page loading */
+.topProgressBar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9999;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}

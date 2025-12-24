@@ -1,0 +1,103 @@
+.toggleButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: none;
+  background-color: var(--ifm-color-emphasis-200);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 1.2rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.toggleButton:hover {
+  background-color: var(--ifm-color-emphasis-300);
+  transform: scale(1.1);
+}
+
+.toggleButton.dark {
+  background-color: var(--ifm-color-emphasis-600);
+}
+
+.toggleButton.dark:hover {
+  background-color: var(--ifm-color-emphasis-700);
+}
+
+.toggleIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+/* Dark mode styles */
+html:not(.dark) {
+  /* Light mode is default */
+}
+
+html.dark {
+  color-scheme: dark;
+}
+
+html.dark body {
+  background-color: #1a1a1a;
+  color: #e0e0e0;
+}
+
+/* Override Docusaurus theme variables for dark mode */
+html.dark {
+  --ifm-color-primary: #25c2a0;
+  --ifm-color-primary-dark: #21af90;
+  --ifm-color-primary-darker: #1fa588;
+  --ifm-color-primary-darkest: #19846d;
+  --ifm-color-primary-light: #29d8b3;
+  --ifm-color-primary-lighter: #30deb8;
+  --ifm-color-primary-lightest: #4de4c6;
+  --ifm-background-color: #1a1a1a;
+  --ifm-background-surface-color: #121212;
+  --ifm-text-color: #e0e0e0;
+  --ifm-text-color-inverse: #111111;
+  --ifm-border-color: #333;
+  --ifm-code-background: #2d2d2d;
+  --ifm-code-color: #e0e0e0;
+  --ifm-hero-text-color: #ffffff;
+  --ifm-hero-background-color: #1a1a1a;
+  --ifm-navbar-background-color: #121212;
+  --ifm-footer-background-color: #121212;
+  --ifm-toc-border-color: #333;
+  --ifm-global-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2);
+  --ifm-global-shadow-heavy: 0 4px 12px 0 rgba(0, 0, 0, 0.4);
+  --ifm-table-border-color: #333;
+  --ifm-table-stripe-background: #1f1f1f;
+  --ifm-table-head-background: #1f1f1f;
+  --ifm-input-background-color: #2d2d2d;
+  --ifm-input-border-color: #444;
+  --ifm-input-color: #e0e0e0;
+  --ifm-input-placeholder-color: #aaa;
+  --ifm-input-focus-border-color: #25c2a0;
+  --ifm-menu-color-background-active: #1f1f1f;
+  --ifm-menu-color-background-hover: #1f1f1f;
+  --ifm-alert-background-color: #1f1f1f;
+  --ifm-card-background-color: #1f1f1f;
+  --ifm-card-border-color: #333;
+  --ifm-badge-background-color: #333;
+  --ifm-badge-border-color: #444;
+  --ifm-color-content: #e0e0e0;
+  --ifm-color-content-secondary: #aaa;
+  --ifm-color-emphasis-0: #ffffff;
+  --ifm-color-emphasis-100: #f5f5f5;
+  --ifm-color-emphasis-200: #e0e0e0;
+  --ifm-color-emphasis-300: #bdbdbd;
+  --ifm-color-emphasis-400: #9e9e9e;
+  --ifm-color-emphasis-500: #757575;
+  --ifm-color-emphasis-600: #616161;
+  --ifm-color-emphasis-700: #424242;
+  --ifm-color-emphasis-800: #212121;
+  --ifm-color-emphasis-900: #121212;
+  --ifm-color-emphasis-1000: #000000;
+}

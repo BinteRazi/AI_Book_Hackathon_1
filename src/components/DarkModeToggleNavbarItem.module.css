@@ -1,0 +1,43 @@
+.navbarItem {
+  display: flex;
+  align-items: center;
+  padding: 0 0.5rem;
+}
+
+.toggleButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 1.2rem;
+  color: var(--ifm-navbar-link-color);
+}
+
+.toggleButton:hover {
+  background-color: var(--ifm-color-emphasis-200);
+  color: var(--ifm-navbar-link-hover-color);
+  transform: scale(1.1);
+}
+
+.toggleButton.dark {
+  color: var(--ifm-color-emphasis-700);
+}
+
+.toggleButton.dark:hover {
+  background-color: var(--ifm-color-emphasis-300);
+  color: var(--ifm-color-emphasis-900);
+}
+
+.toggleIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
