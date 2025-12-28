@@ -3,7 +3,7 @@
   --quiz-success: #2ecc71;
   --quiz-danger: #e74c3c;
   --quiz-muted: #7f8c8d;
-  --quiz-bg: #fafafa;
+  --quiz-bg: var(--ifm-background-surface-color, #fafafa);
   --quiz-border: #e0e0e0;
   --quiz-radius: 10px;
   --quiz-transition: 0.25s ease;
@@ -40,7 +40,7 @@
 ===================== */
 .quizTitle {
   text-align: center;
-  color: #2c3e50;
+  color: var(--ifm-font-color-base);
   margin-bottom: 1.75rem;
   font-size: 1.6rem;
   font-weight: 600;
@@ -59,7 +59,7 @@
 .questionText {
   font-size: 1.15rem;
   margin-bottom: 1.5rem;
-  color: #161f27;
+  color: var(--ifm-font-color-base);
   line-height: 1.6;
 }
 
@@ -70,6 +70,7 @@
   margin-bottom: 1.75rem;
 }
 
+/* 🔥 FIXED PART (TEXT WAS WHITE BEFORE) */
 .answerOption {
   padding: 1rem 1.25rem;
   margin-bottom: 0.6rem;
@@ -80,7 +81,10 @@
   display: flex;
   align-items: flex-start;
   gap: 0.75rem;
-  background: #fff;
+
+  /* FIX */
+  background: var(--ifm-background-surface-color, #fff);
+  color: var(--ifm-font-color-base);
 }
 
 .answerOption:hover {
@@ -97,6 +101,7 @@
 .answerOption.selectedAnswer {
   background-color: #e3f2fd;
   border-color: var(--quiz-primary);
+  font-weight: 600;
 }
 
 /* Correct / Incorrect */
@@ -117,13 +122,14 @@
 ===================== */
 .optionLetter {
   font-weight: 700;
-  color: #2c3e50;
+  color: var(--ifm-font-color-base);
   min-width: 22px;
 }
 
 .optionText {
   flex: 1;
   line-height: 1.5;
+  color: inherit;
 }
 
 /* =====================
@@ -151,7 +157,7 @@
 /* Nav */
 .navButton {
   background-color: #95a5a6;
-  color: white;
+  color: #fff;
 }
 
 .navButton:hover:not(:disabled) {
@@ -166,7 +172,7 @@
 /* Submit */
 .submitButton {
   background-color: var(--quiz-primary);
-  color: white;
+  color: #fff;
 }
 
 .submitButton:hover {
@@ -177,7 +183,7 @@
 /* Reset */
 .resetButton {
   background-color: var(--quiz-success);
-  color: white;
+  color: #fff;
   margin-top: 1.5rem;
   padding: 0.75rem 1.75rem;
 }
@@ -194,7 +200,7 @@
 }
 
 .resultTitle {
-  color: #2c3e50;
+  color: var(--ifm-font-color-base);
   margin-bottom: 1rem;
   font-size: 1.4rem;
 }
@@ -218,7 +224,7 @@
 
 .detailedResults h5 {
   margin-bottom: 1rem;
-  color: #2c3e50;
+  color: var(--ifm-font-color-base);
 }
 
 .questionResult {
@@ -229,7 +235,7 @@
 
 .resultQuestion {
   font-weight: 600;
-  color: #34495e;
+  color: var(--ifm-font-color-base);
   margin-bottom: 0.5rem;
 }
 
