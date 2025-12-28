@@ -129,7 +129,7 @@
 .optionText {
   flex: 1;
   line-height: 1.5;
-  color: inherit;
+  color: black;
 }
 
 /* =====================
@@ -200,7 +200,7 @@
 }
 
 .resultTitle {
-  color: black;
+  color: var(--ifm-font-color-base);
   margin-bottom: 1rem;
   font-size: 1.4rem;
 }
