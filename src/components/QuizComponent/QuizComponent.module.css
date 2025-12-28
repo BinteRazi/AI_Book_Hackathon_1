@@ -200,7 +200,7 @@
 }
 
 .resultTitle {
-  color: var(--ifm-font-color-base);
+  color: black;
   margin-bottom: 1rem;
   font-size: 1.4rem;
 }
